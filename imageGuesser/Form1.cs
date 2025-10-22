@@ -6,7 +6,7 @@ namespace imageGuesser
 {
     public partial class Form1 : Form
     {
-        // deneme
+        // deneme tekrar
 
         bool isBusy = false; //hýzlý týklamayý engellemek için yapay zeka önerdi
         int oy1skor = 0;
