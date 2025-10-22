@@ -6,6 +6,8 @@ namespace imageGuesser
 {
     public partial class Form1 : Form
     {
+        // deneme
+
         bool isBusy = false; //hýzlý týklamayý engellemek için yapay zeka önerdi
         int oy1skor = 0;
         int oy2skor = 0;
@@ -27,6 +29,7 @@ namespace imageGuesser
             imageNumLoad();
         }
 
+        // kartlarda kullandýðým görsellerin sözlükte tutulmasý ve numaralandýrýlmasý
         private void imageNumLoad()
         {
             imageNumber.Add(0, Properties.Resources.apple);
@@ -157,6 +160,7 @@ namespace imageGuesser
 
         }
 
+        // 2. kartýn seçim süresi ve seçilmemesinde olacaklarýn kontrolü
         private void Timer2_Tick(object? sender, EventArgs e)
         {
             kalanSure--;
@@ -190,6 +194,7 @@ namespace imageGuesser
             }
         }
 
+        // Yanlýþ seçim yapýldýðýnda kartlarýn kapanmasý ve diðer oyuncuya geçiþ
         private void YanlisTimer_Tick(object? sender, EventArgs e)
         {
             yanlisTimer.Stop();
@@ -215,6 +220,7 @@ namespace imageGuesser
             oyuncuKontrol();
         }
 
+        // Sýradaki oyuncu için renk deðiþimi
         private void oyuncuKontrol()
         {
             if (mevcutOy == 1)
@@ -232,6 +238,8 @@ namespace imageGuesser
                 label1.ForeColor = Color.Black;
             }
         }
+
+        // Oyunun bitmesi durumunda kazananýn belirlenmesi, ekrana skorun ve tebriðin yazýlmasý. Tekrar baþlatýldýðýnda skorlarýn sýfýrlanmasý
         private void CheckForWinner()
         {
             if (oy1skor == 11 || oy2skor == 11 || oy1skor + oy2skor == 20)
